@@ -1,0 +1,152 @@
+@charset "UTF-8";
+
+
+@import url('https://fonts.googleapis.com/css2?family=Passion+One&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+
+:root {
+  --fonte1: Verdana, Ganeva, Tahoma, sans-serif;
+  --fonte2: 'Passion One', 'cursive';
+  --fonte3: 'Sriracha', cursive;
+}
+
+body {
+    margin: 0px;
+}
+
+header {
+    background-color: black;
+    height: 70px;
+    padding-bottom: 500px;
+    padding-top: 30px;
+}
+
+@media (max-width: 500px) { header { padding-bottom: 130px; } }
+
+header > p {
+    color: white;
+    text-align: center;
+}
+
+header > h1 {
+    color: white;
+    text-align: center;
+    font-size: 15vw;
+    font-family: var(--fonte2);
+}
+
+
+header a, footer a {
+    font-weight: bolder;
+    text-decoration: none;
+    color: white;
+    
+}
+
+
+  p {
+    font-size: 50px;
+}
+
+/* Erros: não coloquei a section p para específicar que são os parágrafos das seções. */
+
+@media (max-width: 500px) { p { font-size: 25px; } }
+
+.imagem01 {
+    background-image: url("flor-700.png");
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    height: 48vh;
+    box-shadow: inset 0px 3px 11px 2px black;
+    
+}
+    
+    /* Erros: poderia somente colcoar a class imagem para as configurações serem as mesmas  */
+   
+.imagem02 {
+    background-image: url("folha-700.png");
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    height: 48vh;
+    box-shadow: inset 0px 3px 11px 2px black;
+    }
+    
+    /* Para deixar a caixa que esta a imagem responsiva para
+    Mobile e Pc eu utilizei o width 100% e o max-heigth 1200px. 
+    
+    Para não diexar bordas brancas nas laterais eu coloquei a 
+    position absolute e left 0px*
+    
+    Com position absolute da para configurar a posição da caixa
+    */
+    
+@media screen and (max-width: 500px) { .imagem01 { background-image: url("flor-500.png"); } }
+
+
+@media screen and (max-width: 500px) { .imagem02 { background-image: url("folha-300.png"); } }
+
+
+.artigo01 {
+    padding-bottom: 10px;
+    padding-left: 20px;
+    font-family: var(--fonte3);
+   
+}
+
+/* Erros: era somente colocar uma class de artigo para as configurações de cada artigo serem as mesmas  */
+
+.artigo02 {
+    background-color: #00000066;
+    color: white;
+    display: inline-block;
+    font-family: var(--fonte3);
+    position: absolute;
+    top: 7%;
+    left: 7%;
+    padding: 5px;
+}  
+
+/*padding: topo direita fundo esquerda  */
+
+.artigo03 {
+      padding-left: 20px;
+      font-family: var(--fonte3);
+}
+
+
+.artigo04 {
+    background-color: #00000066;
+    color: white;
+    display: inline-block;
+    font-family: var(--fonte3);
+    position: absolute;
+    top: 7%;
+    left: 7%;
+    padding: 5px;
+}
+
+.artigo05 {
+    padding: 20px;
+    font-family: var(--fonte3);
+}
+
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    font-family: var(--fonte1);
+    font-size: 1vw;
+}
+
+/* Erros, NÃO PRECISA COLOCAR POSITION ABSOLUTE PARA RODAPÉ NEM PARA HEADER, POR PADRÃO ELES JA SÃO ABSOLE VOCE SO PRECISA AUMENTAR O PADDING. */
